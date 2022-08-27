@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="formContainer">
+    <div class="formContent">
+      <form>
+        <label for="name">Name</label>
+        <input  name='name' type="text" id="name">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="password" maxlength="15" >Password</label>
+        <input name='password' type="password" id="password" minlength="6" required>
+        <label for="password">Confirm Password</label>
+        <input name='confirmpassword' type="password" id="confirmpassword" required>
+        <label for="zipcode" pattern="(\d{5}([\-]\d{4})?)">Zip Code</label>
+        <input  name='zipcode' id="zipcode" type="text">
+        <label for="country">Country</label>
+        <input id='country' name='country' type="text">
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
