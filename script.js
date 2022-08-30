@@ -6,14 +6,17 @@ const required = document.querySelectorAll('[required]')
 const submit = document.getElementById('submit')
 const allpw = document.querySelectorAll("input[type='password']")
 console.log(allpw)
-email.addEventListener("focusout", (event) => {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity("I am expecting an e-mail address!");
-    email.reportValidity();
-  } else {
-    email.setCustomValidity("");
-  }
-});
+function Email() {
+  email.addEventListener("focusout", (event) => {
+    if (email.validity.typeMismatch) {
+      email.setCustomValidity("I am expecting an e-mail address!");
+      email.reportValidity();
+    } else {
+      email.setCustomValidity("");
+    }
+  });
+}
+
 
 conpw.addEventListener('input', (e) => {
   if(conpw != password) {
@@ -25,7 +28,8 @@ conpw.addEventListener('input', (e) => {
 })
 
 submit.addEventListener('click', (e) => {
-  
+  Email()
+  document.getElementById('form').classList.add('submitted');
   required.forEach(item => {
     if(item.validity.valueMissing) {
       e.preventDefault()

@@ -14,6 +14,7 @@
 }
 .formContent {
   display: flex;
+  flex-direction: column;
   background-color: #d6ff44;
   width: 60rem;
   justify-content: center;
@@ -33,7 +34,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   /* align-content: center; */
   /* justify-items: center; */
 }
@@ -43,9 +44,23 @@ input {
   border-radius: 3px;
   background-color: #f4f4f4;
   border: 0;
+  padding-left: 5px;
+}
+
+form.submitted input:invalid{
+  border: 1px solid red;
+  outline: none;
 }
 label {
   align-self: flex-start;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+button {
+  border: none;
+  width: 100px;
+  height: 25px;
+  background-color: #f4f4f4;
+  margin-top: 2px;
 }
